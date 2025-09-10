@@ -203,7 +203,7 @@ module.exports = function(grunt) {
 			absoluteImgUrl = absoluteImgUrl.replace(/\?.*$/, '');
 
 			if(flag && grunt.file.exists(absoluteImgUrl)) {
-				newUrl = new datauri(absoluteImgUrl);
+				newUrl = new datauri(absoluteImgUrl).content;
 			} else {
 				newUrl = newUrl.replace(/\\/g, '/');
 			}
